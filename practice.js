@@ -51,6 +51,10 @@ first(names, function(firstName){
 
 //Code Here
 
+function last(arr, cb) {
+  cb(arr[arr.length - 1])
+}
+
 // Do not edit the code below.
 last(names, function(lastName){
   console.log('The last name in names is ' + lastName);
@@ -68,6 +72,11 @@ last(names, function(lastName){
 */
 
 //Code Here
+
+function multiply(x,y, cb) {
+  let product = x * y
+  cb(product)
+}
 
 // Do not edit the code below.
 multiply(4, 3, function(answer){
@@ -87,6 +96,16 @@ multiply(4, 3, function(answer){
 */
 
 //Code Here 
+
+function contains(arr, name, cb) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === name) {
+      return cb(true)
+    }
+    
+  }
+  return cb(false)
+}
 
 // Do not edit the code below.
 contains(names, 'Colt', function(result){
